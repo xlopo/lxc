@@ -404,8 +404,8 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Parse command options.
-options=$(getopt -o a:dFm:n:p:r:h -l arch:,debug,flush-cache,mirror:,name:,\
-path:,release:,rootfs:,help,mapped-uid:,mapped-gid: -- "$@")
+options=$(getopt -o a:dFm:H:n:p:r:h -l arch:,debug,flush-cache,hostname:,\
+mirror:,name:,path:,release:,rootfs:,help,mapped-uid:,mapped-gid: -- "$@")
 eval set -- "$options"
 
 # Clean variables and set defaults.
